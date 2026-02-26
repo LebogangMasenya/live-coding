@@ -30,7 +30,7 @@ export default function GuestList() {
     return (
         <>
             <input
-                className=' border-2'
+                className='border-2'
                 name='name'
                 value={input}
                 onChange={e => {setInput(e.target.value)}}

@@ -25,17 +25,14 @@ export default function ReadingQueue() {
         <>
             <input className="border-2" name="book" value={input} onChange={e => setInput(e.target.value)}/>
 
-            <button onClick={handleAddToBack}>Add to back</button>
-            <button onClick={handleAddToFront}>Add to front</button>
+            <button className="p-2" onClick={handleAddToBack}>Add to back</button>
+            <button className="p-2" onClick={handleAddToFront}>Add to front</button>
 
-            <div>
-                <ol>
-                {queue.map((q, i) => (
-                    <li key={i}>{q}</li>
-                ))}
-                </ol>
-            </div>
-        
+            <ol type="1">
+                {queue.map((q, i) => {
+                  return (  <li className="text-blue-500" key={i}>{q}</li>)
+                })}
+            </ol>
         </>
     )
 }
